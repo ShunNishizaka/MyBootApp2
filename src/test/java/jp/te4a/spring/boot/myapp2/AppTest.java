@@ -1,6 +1,7 @@
+
 package jp.te4a.spring.boot.myapp2;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
@@ -13,8 +14,11 @@ public class AppTest
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
+    public void helloSpringWorldTest()
     {
-        assertTrue( true );
+        HelloController hc = new HelloController();
+        String expected = "Taro desu!";
+        String actual = hc.taro();
+        assertEquals(actual, expected);
     }
 }
